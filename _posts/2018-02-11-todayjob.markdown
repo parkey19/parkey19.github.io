@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "today work"
+date:   2018-02-11 23:00:54 +0900
+categories: job
+---
+
+## change key value m3u8 write ext-key
+
+{% highlight java %}
+for (int i = 0; i<data.size(); i++) {
+  
+  Boolean isKeyChanged = false;
+  String key = keyMap.get(id);
+  if (!prevKey.equals(key)) {
+    isKeyChanged = true;
+  }
+  ..
+  
+  ..m3u8 file write..
+  if( index || isKeyChanged || date) {
+    file.write("EXT-KEY ~~~~");
+  } 
+  ..
+
+}
+
+{% endhighlight %}
+
+키가 바뀐것에 따라서 `boolean isKeyChanged` 값을 `true` 수정.
+
