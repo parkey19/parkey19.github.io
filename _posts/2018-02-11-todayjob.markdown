@@ -5,7 +5,7 @@ date:   2018-02-11 23:00:54 +0900
 categories: job
 ---
 
-## change key value m3u8 write ext-key
+## change key value에 따른 m3u8 write ext-key 추가!
 
 {% highlight java %}
 for (int i = 0; i<data.size(); i++) {
@@ -29,3 +29,4 @@ for (int i = 0; i<data.size(); i++) {
 
 키가 바뀐것에 따라서 `boolean isKeyChanged` 값을 `true` 수정.
 
+오늘은 별다른 학습을 못했다. 내일은 하스켈 재귀를 요약 하도록 자기전에 읽어야겠다.
