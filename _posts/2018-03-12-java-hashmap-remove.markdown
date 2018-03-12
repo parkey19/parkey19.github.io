@@ -49,6 +49,5 @@ Exception in thread "main" java.util.ConcurrentModificationException
     Java Collection classes for 문을 돌때 내부에서 Itr클래스에 hasNext메소드를 호출 하면서 loop를 순회 할때 컬렉션의 사이즈가 수정 되면 
     ConcurrentModificationException을 발생시키게 된다.
 
-> 참조 링크  
-[1] : http://blog.devez.net/166 jni로 HelloWorld출력  
-[2]: https://opentutorials.org/module/782/6083 JNI를 Xcode이용하기  
+
+
