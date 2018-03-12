@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "HASHMAP REMOVE 주의사항1"
+title:  "HASHMAP REMOVE 주의사항"
 date:   2018-03-12 11:55:00 +0900
 categories: java
 ---
