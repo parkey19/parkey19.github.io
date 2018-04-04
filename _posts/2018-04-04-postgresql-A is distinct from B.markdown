@@ -26,7 +26,23 @@ with a as (
 ```
 
 ```sql
---처음 쿼리 작성
+select 
+	*
+from a left join b on a.id = b.id
+where b.del_flag = 'N';
+```
+
+# 결과  
+-------------
+
+
+| id | index | id(2) | index | del_flag
+|1	|1	|1	|1	|N|
+|2	|2	|2	|1	|N|
+|3	|3	|null	|null	|null |
+
+
+```sql
 select 
 	a.id
 	,count(b.id)
@@ -35,8 +51,11 @@ where b.del_flag = 'N'
 group by a.id;
 ```
 
+원했던 결과는 a 테이블에 id에 따른 카운트였다.  
+
+
 # 원했던 결과  
-- 원했던 결과는 a 테이블에 id에 따른 카운트였다. 그래서 left outer join을 걸었다.
+-------------
 
  | id | count |
  |:------ |:-------:|
@@ -45,6 +64,7 @@ group by a.id;
  | 3 | 0 |
 
 # 실제 결과  
+-------------
 
  | id | count |
  |:------ |:-------:|
