@@ -7,7 +7,10 @@ categories: postgresql
 
 # postgresql - session lock check query
 
-# 현재 모든 session 실행 중인 쿼리 확인  
+# 1. 현재 모든 session 실행 중인 쿼리 확인  
+  ----  
+
+
 ```sql
 --session query stat
 select * from pg_stat_activity; 
@@ -27,8 +30,8 @@ FROM pg_locks l,
 WHERE l.relation = t.relid
 ORDER BY relation ASC;
 ```
-
-# 프로세스 kill
+------
+# 2. 프로세스 kill
 
 ```sql
 --해당 pid만 kill 
