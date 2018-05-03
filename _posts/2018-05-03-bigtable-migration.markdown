@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "postgresql - postgresql table migration query"
-date:   2018-04-03 17:40:00 +0900
+date:   2018-05-03 17:40:00 +0900
 categories: SQL
 ---
 
