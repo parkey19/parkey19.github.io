@@ -24,7 +24,7 @@ A Service-> B Service -> A Service
 {% highlight java %}
 @Service
 public class A {
-//	@Lazy
+
 	@Autowired
 	private B b;
 	
@@ -105,7 +105,7 @@ import com.dependency.circular.service.A;
 @SpringBootTest
 public class CircularApplicationTests {
 		
-	@Autowired
+    @Autowired
     A a;
     
     @Test
