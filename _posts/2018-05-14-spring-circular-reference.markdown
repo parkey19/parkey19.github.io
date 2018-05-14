@@ -13,7 +13,7 @@ spring 에서
 
 A Service-> B Service -> A Service
 
-서비스 객체에서 위와 같이 참조 하고 A 서비스에서 async 메소드를 추가 시 컴파일 시점에 아래와 같이 순환 참조 오류가 발생한다.
+서비스 객체에서 위와 같이 참조 하고 A 서비스에서 async 메소드를 추가 시 컴파일 시점에 아래와 같이 순환 참조 오류가 발생했다.
 
 # 에러 로그
 
@@ -126,9 +126,9 @@ public class CircularApplicationTests {
 
 spring io 에서 데모를 만든 후 테스트 코드를 실행 하면 BeanCurrentlyInCreationException 발생한다.
 
-###  
+## 에러 로그
 org.springframework.beans.factory.**BeanCurrentlyInCreationException**: Error creating bean with name 'a': Bean with name 'a' has been injected into other beans [b] in its raw version as part of a circular reference, but has eventually been wrapped. This means that said other beans do not use the final version of the bean. This is often the result of over-eager type matching - consider using 'getBeanNamesOfType' with the 'allowEagerInit' flag turned off, for example.
-##
+
 
 ## 해결방법
 	1. 종속적인 class를 lazy 로딩
