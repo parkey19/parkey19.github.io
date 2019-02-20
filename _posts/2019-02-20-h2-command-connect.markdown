@@ -11,7 +11,7 @@ categories: java
 
 스프링 배치 프로젝트 중 h2를 사용해서 배치 히스토리를 기록을 하고 있는데 서버 환경에서는 외부에서 접속 할 수가 없어서 검색중에 커맨드 접속 방법이 있어서 기록
 
-[h2.jar download] (http://www.h2database.com/html/download.html)
+[h2.jar download](http://www.h2database.com/html/download.html)
 
 Platform-Independent Zip을 다운받고 압출을 풀면
 bin 폴더에 h2-1.x.jar 파일이 있다
