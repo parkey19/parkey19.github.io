@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "h2 consol 접속"
+title:  "leetcode reverse bits"
 date:   2019-03-06 11:06:00 +0900
 categories: java
 ---
