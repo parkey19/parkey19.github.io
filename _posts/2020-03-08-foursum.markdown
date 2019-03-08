@@ -1,0 +1,76 @@
+---
+layout: post
+title:  "four sum count"
+date:   2019-03-08 10:47:00 +0900
+categories: java
+---
+
+# leetcode four sum count
+
+
+
+leetcode 알고리즘 문제 풀이
+
+무식하게 일단 문제의 예시에 답이 나오도록 4개가 짝이 되는 튜플을 만들어서
+합을 구했다.
+
+내 코드 
+---
+```
+public class Solution {
+    // you need treat n as an unsigned value
+    public int reverseBits(int n) {
+        if (n == 0) return 0;
+
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            result <<= 1;
+            if ((n & 1) == 1) result++;
+            n >>= 1;
+        }
+        return result;
+    }
+}
+```
+
+하지만 **input**이 많아지니 역시.. 실패
+
+그래서 여러가지로 생각을 하다 두개의 배열에서 뽑아낸 조합의 숫자와 나머지 두개의 조합의 숫자를 뺄샘하면 0이되는 것까지는 찾아냈고 set또는 map으로 구현해야하나 생각만 하고 구현에서 막힘..  
+
+결국 다른 사람이 푼 답을 봄
+
+결과
+---
+```
+public int fourSumCount(int[] A, int[] B, int[] C, int[] D) {
+    Map<Integer, Integer> map = new HashMap<>();
+    
+    for(int i=0; i<C.length; i++) {
+        for(int j=0; j<D.length; j++) {
+            int sum = C[i] + D[j];
+            map.put(sum, map.getOrDefault(sum, 0) + 1);
+        }
+    }
+    
+    int res=0;
+    for(int i=0; i<A.length; i++) {
+        for(int j=0; j<B.length; j++) {
+            res += map.getOrDefault(-1 * (A[i]+B[j]), 0);
+        }
+    }
+    
+    return res;
+}
+```
+이중 for로 조합을 찾고 찾은 조합의 합을 키값으로 하고  
+그 조합의 횟수를 값으로 저장
+
+다음 이중 for에서 값은 조합의 반대 조합이 있다면 결과값에 더한다.
+
+getOrDefault(Object key,V defaultValue)
+---
+map값을 가지고 올때 기존값이 있다면 기존값 아니면 디폴트 설정한 값으로 리턴한다.
+
+## 문제 링크
+[foursum count](https://leetcode.com/problems/4sum-ii/)
+[map.getOrDefault](h)
